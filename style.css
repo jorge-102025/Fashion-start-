@@ -1,0 +1,179 @@
+/*
+  Everyday with Isa
+  Beginner-friendly stylesheet
+
+  Add this inside your HTML <head>:
+  <link rel="stylesheet" href="style.css">
+*/
+
+/* ------------------------------
+   1. Basic page setup
+   ------------------------------ */
+
+/* Makes width and height calculations easier to predict. */
+* {
+  box-sizing: border-box;
+}
+
+/* The whole page. */
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background-color: #fff8f5;
+  color: #302b2b;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+/* ------------------------------
+   2. Text styling
+   ------------------------------ */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 24px 0 16px;
+  color: #8e2948;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-top: 56px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e7a9b8;
+  color: #9b3d5a;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+h3 {
+  margin: 0;
+  color: #806b70;
+  font-size: 0.85rem;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin-top: 48px;
+  color: #8e2948;
+  font-size: 1.3rem;
+}
+
+p {
+  max-width: 720px;
+  margin: 18px auto;
+  font-size: 1.08rem;
+}
+
+/* ------------------------------
+   3. Links
+   ------------------------------ */
+
+a {
+  color: #b23b62;
+  font-weight: bold;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #6d1939;
+}
+
+a:focus-visible {
+  outline: 3px solid #f0a6bb;
+  outline-offset: 4px;
+}
+
+/* ------------------------------
+   4. Images
+   ------------------------------ */
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 24px auto;
+  border: 8px solid #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(92, 48, 60, 0.14);
+}
+
+/* Gives the profile image a smaller, circular appearance
+   when the HTML is corrected to use <a><img ...></a>. */
+a img {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 20px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ------------------------------
+   5. Related-content list
+   ------------------------------ */
+
+ul {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 28px 20px 48px;
+  border-left: 4px solid #e7a9b8;
+  background-color: #ffffff;
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* ------------------------------
+   6. Contact section
+   ------------------------------ */
+
+#contact {
+  margin-top: 64px;
+  padding: 22px 24px;
+  border-top: 1px solid #e7a9b8;
+  border-bottom: 1px solid #e7a9b8;
+  background-color: #f9e2e7;
+  text-align: center;
+}
+
+#contact p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* ------------------------------
+   7. Small-screen adjustments
+   ------------------------------ */
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #contact {
+    padding: 18px 12px;
+  }
+}
